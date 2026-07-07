@@ -5,26 +5,42 @@
   },
   {
     "name": "Каталог",
-    "url": "/catalog"
+    "url": "catalog"
+  },
+  {
+    "name": "Акции",
+    "url": "promotions"
   },
   {
     "name": "Доставка",
-    "url": "/delivery"
+    "url": "delivery"
   },
   {
     "name": "О нас",
-    "url": "/about"
+    "url": "about"
   },
   {
     "name": "Контакты",
-    "url": "/contacts"
+    "url": "contacts"
   },
   {
     "name": "Обратная связь",
-    "url": "/feedback"
+    "url": "feedback"
+  },
+  {
+    "name": "FAQ",
+    "url": "faq"
   },
   {
     "name": "Корзина",
-    "url": "/cart"
+    "url": "cart"
+  },
+  {
+    "name": "Политика конфиденциальности",
+    "url": "privacy"
+  },
+  {
+    "name": "Пользовательское соглашение",
+    "url": "terms"
   }
 ]
