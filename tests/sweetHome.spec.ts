@@ -22,9 +22,9 @@ pages.forEach((testPage: {name: string, url: string}) => {
             await page.getByTestId('cookie-accept-button').click();
         }
 
-        if (testPage.url == 'faq') {
-            await page.getByTestId('faq-question-1').click()
-        }
+        // if (testPage.url == 'faq') {
+        //     await page.getByTestId('faq-question-1').click()
+        // }
 
         await expect.soft(page).toHaveScreenshot({
             fullPage: true,
