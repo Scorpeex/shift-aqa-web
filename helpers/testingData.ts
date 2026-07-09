@@ -21,6 +21,10 @@ export const testingPositiveNames = [
                     name: 'Йцу-кен гшЩ',
                     hint:'ФИО с дефисами и пробелами'
                 },
+                {
+                    name: 'ёЁ',
+                    hint:'ФИО с ё и Ё'
+                }
             ]    
 export const testingNegativeNames = [
                 {
@@ -37,7 +41,16 @@ export const testingNegativeNames = [
                 },
                 {
                     name: 'qqq@zzz',
-                    hint:'спецсимволы в ФИО'
+                    hint:'спецсимвол @ в ФИО'
+                },
+                // Добавил другие спецсимволы, но чувствую, что это не то))) В начале лекции был разбор, но мне было плохо слышно
+                {
+                    name: 'qqq!zzz',
+                    hint:'спецсимвол ! в ФИО'
+                },
+                {
+                    name: 'qqq%zzz',
+                    hint:'спецсимвол % в ФИО'
                 }
             ]
 export const testingPositiveEmails = [

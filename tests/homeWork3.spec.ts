@@ -98,11 +98,15 @@ testingNegativeNames.forEach((value: { name: string, hint: string }) => {
 
         await expect(fullNameErrorLocator).toBeVisible()
         await expect(feedbackSubmitButtonLocator).toBeDisabled()
+
+        await fillAllFields(page, {checkbox: false})
+        await expect(fullNameErrorLocator).toBeHidden()
+        await expect(feedbackSubmitButtonLocator).toBeEnabled()
         });
 });
 
 testingPositiveEmails.forEach((value: { email: string, hint: string }) => {
-    test(`Позитивный тест поля ФИО: ${value.hint}. Используется ${value.email || 'пустое значение'}`, async ({ page, request }) => {
+    test(`Позитивный тест поля email: ${value.hint}. Используется ${value.email || 'пустое значение'}`, async ({ page, request }) => {
         const captchaResponsePromise = page.waitForResponse((response) => 
             response.url().includes('/api/captcha')    
         )
@@ -131,7 +135,7 @@ testingPositiveEmails.forEach((value: { email: string, hint: string }) => {
 });
 
 testingNegativeEmails.forEach((value: { email: string, hint: string }) => {
-    test(`Негативный тест поля ФИО: ${value.hint}. Используется ${value.email || 'пустое значение'}`, async ({ page, request }) => {
+    test(`Негативный тест поля email: ${value.hint}. Используется ${value.email || 'пустое значение'}`, async ({ page, request }) => {
         const captchaResponsePromise = page.waitForResponse((response) => 
             response.url().includes('/api/captcha')    
         )
@@ -154,5 +158,9 @@ testingNegativeEmails.forEach((value: { email: string, hint: string }) => {
 
         await expect(emailErrorLocator).toBeVisible()
         await expect(feedbackSubmitButtonLocator).toBeDisabled()
+
+        await fillAllFields(page, {checkbox: false})
+        await expect(emailErrorLocator).toBeHidden()
+        await expect(feedbackSubmitButtonLocator).toBeEnabled()
         });
 });
